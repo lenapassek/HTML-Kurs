@@ -1,37 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+.video-container {
+    width: 100%;
+    padding: 30px;
+}
+
 video {
-    margin-left: 2em;
-    margin-top: 2em;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 #leiste {
-    margin-left: 2em;
     background-color: rgb(177, 212, 195);
-    width: 960px;
-}
-
-img{
-    padding: 0.5em 0.5em 0.2em 0em;
-}
-
-#playButton{
-    padding-left: 0.5em;
-}
-
-#overlayHover {
-    position: absolute;
-    margin-left: 5em;
-    height: 100%;
     width: 100%;
-    opacity: 0;
-    transition: .5s ease;
+    padding: 1em;
+    display: flex;
+    gap: 0.5em;
 }
+
+#leiste .button {
+    width: 45px;
+    height: 46px;
+    outline: 0px solid red;
+    position: relative;
+    cursor: pointer;
+}
+
+#playButtonBox {
+    
+}
+
+#playButton {
+    /* padding-left: 0.5em; */
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+#playButtonHover {
+    display: block;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#playButtonBox:hover #playButton {
+    
+}
+
+#playButtonBox:hover #playButtonHover {
+    opacity: 1;
+}
+
+#pauseButtonBox {
+    background-image: url(pause_sprite.png);
+    background-position: 0 0;
+}
+
+#pauseButtonBox:hover {
+    background-position: 0 46px;
+}
+
 /*Anpassung für mobile Screen */
 
-@media (max-width: 400px) {
-    #video {
-        width: 480px;
-        height: 270px;
-    }
+@media (max-width: 700px) {
+    
 }
 
 /* Anpassung für breite Screens */
