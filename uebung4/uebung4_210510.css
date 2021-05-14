@@ -1,0 +1,44 @@
+video {
+    margin-left: 2em;
+    margin-top: 2em;
+}
+
+#leiste {
+    margin-left: 2em;
+    background-color: rgb(177, 212, 195);
+    width: 960px;
+}
+
+img{
+    padding: 0.5em 0.5em 0.2em 0em;
+}
+
+#playButton{
+    padding-left: 0.5em;
+}
+
+#overlayHover {
+    position: absolute;
+    margin-left: 5em;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+/*Anpassung für mobile Screen */
+
+@media (max-width: 400px) {
+    #video {
+        width: 480px;
+        height: 270px;
+    }
+}
+
+/* Anpassung für breite Screens */
+/*@media (min-width: 2000px) {
+    video {
+        width: 1920px;
+        height: 1080px;
+
+    }
+}*/
