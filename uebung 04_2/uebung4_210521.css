@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+}
+
+nav {
+    width: 80%;
+    height: 5em;
+    margin: 0 10% 0 10%;
+    position:absolute;
+    z-index: 1000;
+    border-bottom: 2px solid white;
+}
+
+nav li {
+    display: inline;
+    position: relative;
+    font-family: sans-serif;
+    color: white;
+    opacity: 0.5;
+    font-size: 20px;
+    margin-left: 50px;
+    align-items: center;
+}
+
+.nav li :hover {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.line {
+    border-left: 2px solid white;
+    padding-left: 2em;
+    margin-left: 25px;
+}
+
+.logo {
+    margin-top: 1.5em;
+}
+
