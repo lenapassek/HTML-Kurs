@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cute Videoplayer</title>
+    <link rel="stylesheet" href="uebung5.css" />
+    <script src="uebung5.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Try my cute Video Player</h1>
+    </header>
+    <main>
+        <section>
+            <figure>
+                <video id="video" src="Video_1.mp4" width=1100px heigth=auto></video>
+                <figcaption>
+                    <progress id="progress" max="100" value="0">Progress</progress>
+                </figcaption>
+            </figure>
+            <nav>
+                <ul>
+                    <li><svg version="1.1" class="color" id="muteButton" width=81px height=55px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 77.59 48.69" style="enable-background:new 0 0 77.59 48.69;"
+                            xml:space="preserve">
+                        <g>
+                            <path id="soundWave1" class="soundWaves" d="M63.21,5.89c0,0,12.69,3.71,12.88,17.88c0.18,14.17-12.88,19.01-12.88,19.01"/>
+                            <path id="soundWave2" class="soundWaves" d="M56.75,15.09c0,0,6.37,1.86,6.46,8.97c0.09,7.11-6.46,9.53-6.46,9.53"/>
+                            <path class="st1" d="M36.67,2.66L8.53,18.92c-3.21,2.42-3.21,7.41,0,9.83l28.13,17.28c3.84,2.89,9.21,0.03,9.21-4.91V7.57
+                                C45.87,2.63,40.51-0.24,36.67,2.66z"/>
+                            <path class="st1" d="M11.7,14.94l-9.2,7.28c-1.33,1.05-1.33,3.21,0,4.26l9.2,7.28c1.59,1.26,3.81,0.01,3.81-2.13V17.07
+                                C15.51,14.92,13.29,13.68,11.7,14.94z"/>
+                        </g>
+                        </svg>
+                    </li>
+                    <li class="spacer"> </li>
+                    <li><svg version="1.1" class="color" id="pauseButton" width=37px height=55px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.37 55" style="enable-background:new 0 0 36.37 55;"
+                            xml:space="preserve">
+                            <rect x="1.5" y="1.5" class="pauseSVG" width="11.45" height="52"/>
+                            <rect x="23.42" y="1.5" class="pauseSVG" width="11.45" height="52"/>
+                            </svg>
+                    </li>
+                    <li><svg version="1.1" class="color spulen" id="backwardButton" width=33px height=32px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.15 26.88" style="enable-background:new 0 0 50.15 26.88;" xml:space="preserve">
+                        <g>
+                            <path class="st0 " d="M1.5,3.58v19.73c0,1.57,1.66,2.57,3.02,1.83l19.09-9.84c1.48-0.8,1.43-2.96-0.08-3.7L4.44,1.71 C3.08,1.05,1.5,2.05,1.5,3.58z"/>
+                            <path class="st0 " d="M25.45,3.58v19.73c0,1.57,1.66,2.57,3.02,1.83l19.09-9.84c1.48-0.8,1.43-2.96-0.08-3.7L28.39,1.71 C27.03,1.05,25.45,2.05,25.45,3.58z"/>
+                        </g>
+                        </svg>
+                    </li>
+                    <li><svg version="1.1 " class="color" id="playButton" width=55px height=54px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 47.81 48.69" style="enable-background:new 0 0 47.81 48.69;" xml:space="preserve">
+                            <path class="playSVG " d="M45.32,25.89L4.12,46.99c-1.2,0.61-2.62-0.26-2.62-1.62V3.32c0-1.35,1.42-2.23,2.62-1.62l41.2,20.96 C46.64,23.33,46.64,25.22,45.32,25.89z"/>
+                            </svg>
+                    </li>
+                    <li><svg version="1.1 " class="color spulen" id="forwardButton" width=33px height=32px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.15 26.88" style="enable-background:new 0 0 50.15 26.88;"
+                            xml:space="preserve">
+                        <g>
+                            <path class="st0" d="M1.5,3.58v19.73c0,1.57,1.66,2.57,3.02,1.83l19.09-9.84c1.48-0.8,1.43-2.96-0.08-3.7L4.44,1.71
+                                C3.08,1.05,1.5,2.05,1.5,3.58z" />
+                            <path class="st0" d="M25.45,3.58v19.73c0,1.57,1.66,2.57,3.02,1.83l19.09-9.84c1.48-0.8,1.43-2.96-0.08-3.7L28.39,1.71
+                                C27.03,1.05,25.45,2.05,25.45,3.58z" />
+                        </g>
+                        </svg>
+                    </li>
+                    <li><svg version="1.1" class="color" id="stopButton" width=47px height=47px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 47 47" style="enable-background:new 0 0 47 47;" xml:space="preserve">
+                        <path class="st0" d="M6.69,1.5h33.63c2.86,0,5.19,2.26,5.19,5.04v33.93c0,2.78-2.32,5.04-5.19,5.04H6.69
+                            c-2.86,0-5.19-2.26-5.19-5.04V6.54C1.5,3.76,3.82,1.5,6.69,1.5z"/>
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+</body>
+
+</html>

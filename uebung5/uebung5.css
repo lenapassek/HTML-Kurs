@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #E5F5F4;
+}
+
+header {
+    height: 60px;
+    background-color: white;
+    box-shadow: 0px 6px 10px #ccecec;
+}
+
+header h1 {
+    font-family: Pattaya;
+    font-size: 23px;
+    color: #FFACDF;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #538D8D;
+    text-align: center;
+    padding-top: 14px;
+}
+
+video {
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+}
+
+#progress {
+    display: block;
+    width: 1100px;
+    margin: auto;
+    appearance: none; /* Needed for Safari */
+    border: none; /* Needed for Firefox */
+    color: #e52e71; 
+}
+
+nav {
+    width: 1100px;
+    margin: auto;
+    background-color: white;
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+}
+
+img {
+    padding: 10px 20px;
+}
+
+svg {
+    padding: 10px 20px;
+}
+
+.spulen {
+    padding-bottom: 20px;
+}
+
+#backwardButton {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.color {
+    fill: #FFACDF;
+    stroke: #538D8D;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.color:hover {
+    fill: #ff619e;
+    stroke: #537f9d;
+    stroke-width: 3;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.soundWaves {
+    fill: none;
+}
+
+
+
+.spacer {
+    display: inline-block;
+    width: 20%;
+}
