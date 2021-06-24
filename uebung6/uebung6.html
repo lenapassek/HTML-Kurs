@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="uebung6.css" />
+    <script src="uebung6.js" defer></script>
+</head>
+
+<body>
+    <ul id = "slideshow">
+        <li class = "visible">
+            <img src="Bild01.jpg" alt="Mountain01" width="1200px" height="400px"/>
+            <h1>Genieße die schöne Landschaft Österreichs</h1>
+            <p>Blaue Seen mit der Möglichkeit zu tollen Bootsfahrten </p>
+        </li>
+        <li>
+            <img src="Bild02.jpg" alt="Mountain01" width="1200px" height="400px"/>
+            <h1>Eine Vielzahl an idyllischen Badeseen</h1>
+            <p>Baden mit der ganzen Familie vor toller Kulisse</p>
+        </li>
+        <li>
+            <img src="Bild03.jpg" alt="Mountain01" width="1200px" height="400px"/>
+            <h1>Die schönsten Sonnenuntergänge</h1>
+            <p>Fantastische Sonnenuntergänge in den Bergen erleben</p>
+        </li>
+        <div style="text-align:center">
+            <span class="dot active" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>         
+    </main>
+</body>
+
+</html>
