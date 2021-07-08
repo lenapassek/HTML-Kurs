@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap');
+
+body,html {
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #EFFFF0;
+}
+
+nav {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #E0DAFD;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow:3px 0px 10px #c9c9c9;;
+}
+
+#text {
+    margin-left: 10%;
+    width: 70%;
+}
+
+h1 {
+    margin-top: 35%;
+    font-family:  'Baloo Tammudu 2', cursive;
+    color: #5247A8;
+    font-size: 30px;
+    line-height: 1em;
+    text-shadow: 0px -1px rgb(163, 163, 163);
+}
+
+h3 {
+    margin-top: 45%;
+    font-family:  'Baloo Tammudu 2', cursive;
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1em;
+    text-shadow: 0px -1px rgb(201, 201, 201);
+}
+
+#levels {
+    margin-left: 3%;
+}
+
+.st0 {
+    fill: white;
+    stroke: #5247A8;
+    stroke-width: 2px;
+    stroke-linejoin:round;
+    stroke-linejoin:round;
+}
+
+h4 {
+    margin-top: 45%;
+    font-family:  'Baloo Tammudu 2', cursive;
+    color: #5247A8;
+    font-size: 40px;
+    line-height: 1em;
+    display: inline;
+    text-shadow: 0px -1px rgb(163, 163, 163);
+}
+
+p {
+    font-family:  'Baloo Tammudu 2', cursive;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1em;
+    text-shadow: 0px -1px rgb(201, 201, 201);
+}
+
+.number {
+    opacity: 0;
+    background-color: #ffffff; /* Green */
+    border: 3px solid;
+    border-color: rgb(104, 104, 104);
+    color: rgb(104, 104, 104);
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.background {
+    position: absolute;
+    background-color:#ffffff;
+    border: 3px solid;
+    border-color: #b8afe0;
+    border-radius: 20px;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 40%;
+}
+
+#gitter{
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 16%;
+    margin-bottom: 9%;
+}
+
+td {
+    padding: 0;
+    border-collapse: collapse;
+}
+
+#start {
+    background-color:#E0DAFD;
+    border: 3px solid;
+    border-color: #5247A8;
+    color: #5247A8;
+    padding: 3px 7px;
+    width: 160px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 6%;
+    margin-bottom: 4%;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#buttonContainer {
+    margin: 0 auto;
+    width: 100%;
+}
