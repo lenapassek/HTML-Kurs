@@ -45,6 +45,20 @@ function checkRightNumber(fieldName) {
     }else{
         fieldButton.innerText = "No";
     }
+
+    if (numberToCompare === numbers.length+1 ) {
+        var buttonsCount = numbers.length;
+
+        for(let i = 1; i <= buttonsCount; i++){
+            var fieldName = 'field' + i;
+        
+            let fieldNumber = document.getElementById(fieldName);
+        
+            fieldNumber.style.borderColor = "#23da75";
+        }
+        numberToCompare = 1;
+    }
+
 }
 
 
@@ -53,6 +67,8 @@ function showNumbers(){
     var buttonsCount = numbers.length;
 
     let numbersArray = createArrayOfNumbers(1, buttonsCount);
+    shownNumbers = [];
+    console.log("test" + shownNumbers);
 
     for(let i = 1; i <= buttonsCount; i++){
         var fieldName = 'field' + i;
