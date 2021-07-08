@@ -2,17 +2,35 @@
 var numbers = document.getElementsByClassName("number");
 var shownNumbers = [];
 var numberToCompare = 1;
+var countdown = document.getElementById("countdown");
+
 
 
 
 var startButton = document.getElementById('start');
 startButton.addEventListener('click',function() {
-    showNumbers();
 
-    setTimeout(clearNumbers,1500);
+    countdown.style.visibility = "visible";
+    var counter = 3;
+    countdown.innerText = counter;
+    var intervalId = setInterval(function(){
 
-    setTimeout(createEventListener, 1500);
+        counter--;
+        countdown.innerText = counter;
+
+        if (counter < 1) {
+            window.clearInterval(intervalId);
+            countdown.style.visibility = "hidden";
+            showNumbers();
+
+            setTimeout(clearNumbers,1500);
+        
+            setTimeout(createEventListener, 1500);
+        }
+
+    },1000);
 });
+
 
 function checkRightNumber(fieldName) {
     var fieldNumber = fieldName.slice(5,6);
