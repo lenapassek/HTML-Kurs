@@ -1,7 +1,6 @@
 
 /*
 TO DO:
-- add Winning Screen
 - Max Häschen Spiel :D
 */
 
@@ -16,6 +15,7 @@ var countdown = document.getElementById("countdown");
 var gameOverScreen = document.getElementById("gameOverScreen");
 var winningScreen = document.getElementById("winningScreen");
 var resetButton = document.getElementById("reset");
+var timeoutArr = [1500, 1000, 500, 1500, 1000, 500, 2500, 2000, 1500];
 const gitter = document.querySelector('#gitter');
 const lives = document.querySelector('#lives');
 const levels = {
@@ -80,16 +80,8 @@ function startGame () {
             window.clearInterval(intervalId);
             countdown.classList.add('hidden');
             createGrid((Math.floor(userLevel/3.1)+1)*3);
-            
-            if (userLevel%3===1){
-                if(userLevel===7){
-                    timeout = 2500;
-                }else{
-                    timeout = 1500;
-                }               
-            }else{
-                timeout = timeout - 500;
-            }
+
+            timeout = timeoutArr[userLevel-1];
 
             console.log(timeout);
             setTimeout(clearNumbers, timeout);
