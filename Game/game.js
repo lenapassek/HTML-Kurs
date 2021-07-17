@@ -14,6 +14,7 @@ var inputLock = true;
 var timeout = 1500;
 var countdown = document.getElementById("countdown");
 var gameOverScreen = document.getElementById("gameOverScreen");
+var winningScreen = document.getElementById("winningScreen");
 var resetButton = document.getElementById("reset");
 const gitter = document.querySelector('#gitter');
 const lives = document.querySelector('#lives');
@@ -25,6 +26,7 @@ var solvedSound = new Audio("audio/solved_audio.wav");
 var lostSound = new Audio("audio/lost_audio.wav");
 var gameOverSound = new Audio("audio/gameOver_audio.wav");
 var countdownSound = new Audio("audio/countdown_audio.wav");
+var winningSound = new Audio("audio/winning_audio.wav");
 
 
 gitter.addEventListener('click', function (e) {
@@ -80,7 +82,11 @@ function startGame () {
             createGrid((Math.floor(userLevel/3.1)+1)*3);
             
             if (userLevel%3===1){
-                timeout = 1500;
+                if(userLevel===7){
+                    timeout = 2500;
+                }else{
+                    timeout = 1500;
+                }               
             }else{
                 timeout = timeout - 500;
             }
@@ -165,10 +171,19 @@ function checkRightNumber(fieldTarget) {
         gitter.classList.add('solved');
 
         inputLock = true;
-        solvedSound.load();
-        solvedSound.play();
-        userLevel += 1;
-        setTimeout(startGame, 1500);
+        if (userLevel <9){
+            solvedSound.load();
+            solvedSound.play();
+            userLevel += 1;
+            setTimeout(startGame, 1500);
+        }else{
+            winningSound.load();
+            winningSound.play();
+
+            winningScreen.classList.remove("hidden");
+            gitter.classList.add("hidden");
+            resetButton.classList.remove("hidden");
+        }
     }
 
     return;
@@ -205,6 +220,6 @@ function createArrayOfNumbers(start, end) {
     for(let i = start; i<= end; i++){
         myArray.push(i);
     }
-
     return myArray;
+    
 };
