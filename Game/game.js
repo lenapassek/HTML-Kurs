@@ -1,4 +1,11 @@
 
+/*
+TO DO:
+- add Winning Screen
+- Max Häschen Spiel :D
+*/
+
+
 var numbers = document.getElementsByClassName("number");
 var shownNumbers = [];
 var numberToCompare = 1;
@@ -6,6 +13,8 @@ var userLevel = 1;
 var inputLock = true;
 var timeout = 1500;
 var countdown = document.getElementById("countdown");
+var gameOverScreen = document.getElementById("gameOverScreen");
+var resetButton = document.getElementById("reset");
 const gitter = document.querySelector('#gitter');
 const lives = document.querySelector('#lives');
 const levels = {
@@ -33,6 +42,10 @@ startButton.addEventListener('click',function() {
     startGame();
     startButton.classList.add('hidden');
 });  
+
+resetButton.addEventListener('click', function(){
+    window.location.reload();
+})
 
 function startGame () {
 
@@ -140,7 +153,10 @@ function checkRightNumber(fieldTarget) {
         }else{
             gameOverSound.load();
             gameOverSound.play();
-            //to do:gameoverscreen, reset Button
+
+            gameOverScreen.classList.remove("hidden");
+            gitter.classList.add("hidden");
+            resetButton.classList.remove("hidden");
         }
     }
 
