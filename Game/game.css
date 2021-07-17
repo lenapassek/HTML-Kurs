@@ -192,7 +192,4 @@ p {
 
 #buttonContainer {
     display: flex;
-    margin: 0 auto;
-    width: 100%;
-    margin-top: 100px;
 }

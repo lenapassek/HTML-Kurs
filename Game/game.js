@@ -103,14 +103,15 @@ function createGrid (amount) {
 function checkRightNumber(fieldTarget) {
 
     const number = fieldTarget.getAttribute('data-number');
+    fieldTarget.innerText = number;
 
     if(number == numberToCompare) {
-        fieldTarget.innerText = "Yes";
+        //fieldTarget.innerText = numberToCompare;
         fieldTarget.classList.add('solved');
         numberToCompare ++;
 
     }else{
-        fieldTarget.innerText = "No";
+        //fieldTarget.innerText = "No";
 
         fieldTarget.classList.add('lost');
 
