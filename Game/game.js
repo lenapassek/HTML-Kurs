@@ -12,6 +12,10 @@ const levels = {
     'current': document.querySelector('#levels .current'),
     'total': document.querySelector('#levels .total')
 }
+var solvedSound = new Audio("audio/solved_audio.wav");
+var lostSound = new Audio("audio/lost_audio.wav");
+var gameOverSound = new Audio("audio/gameOver_audio.wav");
+var countdownSound = new Audio("audio/countdown_audio.wav");
 
 
 gitter.addEventListener('click', function (e) {
@@ -31,6 +35,9 @@ startButton.addEventListener('click',function() {
 });  
 
 function startGame () {
+
+    countdownSound.load();
+    countdownSound.play();
     
     //reset values
     numberToCompare = 1;
@@ -106,12 +113,10 @@ function checkRightNumber(fieldTarget) {
     fieldTarget.innerText = number;
 
     if(number == numberToCompare) {
-        //fieldTarget.innerText = numberToCompare;
         fieldTarget.classList.add('solved');
         numberToCompare ++;
 
     }else{
-        //fieldTarget.innerText = "No";
 
         fieldTarget.classList.add('lost');
 
@@ -129,8 +134,12 @@ function checkRightNumber(fieldTarget) {
         remainingLives[remainingLives.length-1].classList.add('empty');
 
         if (remainingLives.length > 1) {
+            lostSound.load();
+            lostSound.play();
             setTimeout(startGame, 1500);
         }else{
+            gameOverSound.load();
+            gameOverSound.play();
             //to do:gameoverscreen, reset Button
         }
     }
@@ -140,7 +149,8 @@ function checkRightNumber(fieldTarget) {
         gitter.classList.add('solved');
 
         inputLock = true;
-
+        solvedSound.load();
+        solvedSound.play();
         userLevel += 1;
         setTimeout(startGame, 1500);
     }
