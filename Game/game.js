@@ -111,7 +111,13 @@ function checkRightNumber(fieldTarget) {
 
     }else{
         fieldTarget.innerText = "No";
-        gitter.classList.add('lost');
+
+        fieldTarget.classList.add('lost');
+
+        for(var i=0; i<numbers.length; i++){
+            numbers[i].classList.add('lost');
+            numbers[i].classList.remove('solved');
+        }
 
         inputLock = true;
 

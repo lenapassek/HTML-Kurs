@@ -128,11 +128,13 @@ p {
     cursor: pointer;
 }
 
-/*
-#gitter .number.solved {
-
+.number.solved {
+    border-color: #23da75;
 }
-*/
+
+.number.lost {
+    border-color: red;
+}
 
 .background {
     flex: 1;
@@ -147,7 +149,6 @@ p {
 }
 
 #gitter {
-    outline: 0px solid #f0f;
     padding: 0;
     margin: 0 auto;
     margin-top: 16%;
@@ -158,13 +159,6 @@ p {
     /*overflow: hidden;*/
 }
 
-#gitter.solved {
-    border: 2px solid #23da75;
-}
-
-#gitter.lost {
-    border: 2px solid red;
-}
 
 #gitter li {
     list-style: none;
