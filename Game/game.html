@@ -4,60 +4,48 @@
 <head>
     <meta charset="utf-8" />
     <title>Game</title>
-    <link rel="stylesheet" href="game.css" />
     <script src="game.js" defer></script>
+    <link rel="stylesheet" href="game.css" />
+    
 </head>
 
 <body>
-    <nav>
-        <div id="text">
-            <h1>number game</h1>
-            <p>Click the boxes in the correct order.</p>
-            <h3>level</h3>
-            <h4>1</h4>
-            <h4 id="levels">/ 9</h4>
-            <h3>life</h3>
-            <svg version="1.1" id="life1" width=40px height=40px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	        viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-            <path class="st0" d="M29.5,1.01c-5.24,0-9.5,4.25-9.5,9.5c0-5.24-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5c0,0-0.87,12.12,18.99,28.49
-	        c0,0,18.99-13.44,18.99-28.49C38.99,5.26,34.74,1.01,29.5,1.01z"/>
-            </svg>
-            <svg version="1.1" id="life2" width=40px height=40px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	        viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-            <path class="st0" d="M29.5,1.01c-5.24,0-9.5,4.25-9.5,9.5c0-5.24-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5c0,0-0.87,12.12,18.99,28.49
-	        c0,0,18.99-13.44,18.99-28.49C38.99,5.26,34.74,1.01,29.5,1.01z"/>
-            </svg>
-            <svg version="1.1" id="life3" width=40px height=40px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	        viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
-            <path class="st0" d="M29.5,1.01c-5.24,0-9.5,4.25-9.5,9.5c0-5.24-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5c0,0-0.87,12.12,18.99,28.49
-	        c0,0,18.99-13.44,18.99-28.49C38.99,5.26,34.74,1.01,29.5,1.01z"/>
-            </svg>
-        </div>
-    </nav>
-    <div class="background">
-        <p id="countdown">3</p>
-        <table id="gitter">     
-            <tr>
-                <td><button class="number" id="field1">1</button></td>
-                <td><button class="number" id="field2">2</button></td>
-                <td><button class="number" id="field3">3</button></td>
-            </tr>
-            <tr>
-                <td><button class="number" id="field4">4</button></td>
-                <td><button class="number" id="field5">5</button></td>
-                <td><button class="number" id="field6">6</button></td>
-            </tr>
-            <tr>
-                <td><button class="number" id="field7">7</button></td>
-                <td><button class="number" id="field8">8</button></td>
-                <td><button class="number" id="field9">9</button></td>
-            </tr>
-        </table>
+    <div id="all">
+        <nav>
+            <div id="text">
+                <h1>number game</h1>
+                <p>Click the boxes in the correct order.</p>
+                <h3>level</h3>
+                <h4 id="levels"><span class="current">1</span>/<span class="total">9</span></h4>
+                <h3>life</h3>
+                <div id="lives">
+                <svg version="1.1" id="life1" width=40px height=40px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	        viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                <path class="st0" d="M29.5,1.01c-5.24,0-9.5,4.25-9.5,9.5c0-5.24-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5c0,0-0.87,12.12,18.99,28.49
+    	        c0,0,18.99-13.44,18.99-28.49C38.99,5.26,34.74,1.01,29.5,1.01z"/>
+                </svg>
+                <svg version="1.1" id="life2" width=40px height=40px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	        viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                <path class="st0" d="M29.5,1.01c-5.24,0-9.5,4.25-9.5,9.5c0-5.24-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5c0,0-0.87,12.12,18.99,28.49
+    	        c0,0,18.99-13.44,18.99-28.49C38.99,5.26,34.74,1.01,29.5,1.01z"/>
+                </svg>
+                <svg version="1.1" id="life3" width=40px height=40px xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	        viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+                <path class="st0" d="M29.5,1.01c-5.24,0-9.5,4.25-9.5,9.5c0-5.24-4.25-9.5-9.5-9.5s-9.5,4.25-9.5,9.5c0,0-0.87,12.12,18.99,28.49
+    	        c0,0,18.99-13.44,18.99-28.49C38.99,5.26,34.74,1.01,29.5,1.01z"/>
+                </svg>
+                </div>
+            </div>
+        </nav>
+        <div class="background">
+            <ul id="gitter"></ul>
+            
+            <div id="buttonContainer">
+                <button id="start">Start</button>
+            </div>
 
-        <div id="buttonContainer">
-            <button id="start">Start</button>
+            <p id="countdown" class="hidden"><span>3</span></p>
         </div>
     </div>
 </body>
-
 </html>
